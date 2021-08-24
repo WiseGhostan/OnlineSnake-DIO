@@ -1,3 +1,4 @@
+//variaveis
 let canvas = document.getElementById("cobrita");
 let context = canvas.getContext("2d");
 let box = 32;
@@ -17,6 +18,7 @@ function backGround() {
     context.fillStyle = "black";
     context.fillRect(0, 0, 16 * box, 16 * box);
 }
+//gerar cobra
 function cobra() {
     for (let i = 0; i < snake.length; i++) {
         context.fillStyle = "gray";
@@ -96,12 +98,10 @@ function start() {
         }
         
     }
-
     snake.unshift(cabeca);
-
+    //render de objetos
     backGround();
     cobra();
     comida()
 }
-
 let jogo = setInterval(start, 250);
